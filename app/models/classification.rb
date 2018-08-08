@@ -4,7 +4,7 @@ class Classification < ActiveRecord::Base
 
 
   def self.my_all
-    all.where(:classifications)
+    all
   end
 
 end

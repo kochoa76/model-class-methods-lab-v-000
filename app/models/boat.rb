@@ -24,7 +24,7 @@ class Boat < ActiveRecord::Base
   end
 
   def self.sailboats
-    self.includes(:classifications).where("classifications.name = ?", "sailboat").references(:classifications)
+  includes(:classifications).where('classifications.name = ?', 'sailboat').references(:classifications)
   end
 
 

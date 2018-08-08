@@ -27,10 +27,10 @@ class Boat < ActiveRecord::Base
   includes(:classifications).where('classifications.name = ?', 'Sailboat').references(:classifications)
   end
 
-  def self.with_three_classifications 
+  def self.with_three_classifications
     includes(:classifications).where('classifications.name.count = ?', 3 ).references(:classifications)
-  end 
-  
+  end
+
 
 
 end

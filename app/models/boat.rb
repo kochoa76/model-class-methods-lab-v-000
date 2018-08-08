@@ -24,7 +24,7 @@ class Boat < ActiveRecord::Base
   end
 
   def self.sailboats
-    all.where(self.classifications == "sailboat")
+    all.where(all.classifications == "sailboat")
   end
 
 

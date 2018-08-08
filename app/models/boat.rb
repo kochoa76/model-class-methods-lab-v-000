@@ -12,13 +12,13 @@ class Boat < ActiveRecord::Base
   end
 
   def self.ship
-    self.all.where("length >= 20") 
+    self.all.where("length >= 20")
   end
 
-  def self.last_three_alphabetically 
+  def self.last_three_alphabetically
     self.all.limit(3).sort
-  end 
-  
+  end
+
 
 
 end

@@ -4,7 +4,6 @@ class Boat < ActiveRecord::Base
   has_many    :classifications, through: :boat_classifications
 
   def self.first_five
-    b = Boat.find_or_create(created_at: created_at)
-    return b.created_at[0,5]
+    self.all.limit(5)
   end
 end

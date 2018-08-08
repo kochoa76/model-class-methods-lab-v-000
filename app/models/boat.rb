@@ -20,7 +20,9 @@ class Boat < ActiveRecord::Base
   end
 
   def self.without_a_captain
-    all.where(!captain.exist?)
+    all.each do |boat| 
+      !boat.captain.exists?
+    end 
   end
 
 

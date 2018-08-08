@@ -8,6 +8,6 @@ class Classification < ActiveRecord::Base
   end
 
   def self.longest
-    includes(:boats).longest.classifications
+    Boat.longest.classications
   end
 end

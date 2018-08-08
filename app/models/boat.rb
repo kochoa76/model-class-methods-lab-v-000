@@ -7,8 +7,8 @@ class Boat < ActiveRecord::Base
     self.all.limit(5)
   end
 
-  def dinghy
-    self.all.where("length <?", boats.length= "20")
+  def self.dinghy
+    self.all.where("length < 20")
   end
 
 end

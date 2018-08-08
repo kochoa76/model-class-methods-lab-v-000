@@ -8,7 +8,6 @@ class Classification < ActiveRecord::Base
   end
 
   def self.longest
-    
-    where(:boats).order('length DESC').first
+    includes(:boats).order('length DESC').first
   end
 end

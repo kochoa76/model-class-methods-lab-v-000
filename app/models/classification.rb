@@ -3,8 +3,8 @@ class Classification < ActiveRecord::Base
   has_many :boats, through: :boat_classifications
 
 
-  def my_all
-    all 
+  def self.my_all
+    all.where(:classifications)
   end
 
 end

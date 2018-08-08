@@ -7,4 +7,7 @@ class Classification < ActiveRecord::Base
     all
   end
 
+  def self.longest
+    all.where(:boats).order("length ASC") 
+  end
 end
